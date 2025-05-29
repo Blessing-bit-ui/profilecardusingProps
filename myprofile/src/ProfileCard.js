@@ -1,3 +1,6 @@
+import './App.css';
+import blessing from './assets/blessing.jpg'
+
 const skills = [
   {
     skill: "HTML+CSS",
@@ -32,6 +35,16 @@ const skills = [
 ];
 
 function ProfileCard() {
-  return <div></div>;
+  return <div>
+    <Avatar />
+  </div>
 }
 export default ProfileCard;
+
+
+function Avatar(){
+    return(
+        <img src={blessing} alt="myphoto" class="avatar"/>
+    )
+}
+

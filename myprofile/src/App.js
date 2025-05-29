@@ -1,13 +1,11 @@
-
-import './App.css';
-import ProfileCard from './ProfileCard'
-
+import "./App.css";
+import ProfileCard from "./ProfileCard";
 
 function App() {
   return (
     <div>
-    <ProfileCard />
+      <ProfileCard />
     </div>
-  )
+  );
 }
 export default App;
