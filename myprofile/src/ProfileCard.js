@@ -35,9 +35,16 @@ const skills = [
 ];
 
 function ProfileCard() {
-  return <div>
-    <Avatar />
-  </div>
+  return (
+    <div>
+      <Avatar />
+      <Intro
+        name="Yembe Blessing"
+        about="Aspiring full-stack web-developer, international and business management student and teacher ate Humly. When am not coding,teaching or studying, I like to listen to music, cook and try new food."
+      />
+      <Skills />
+    </div>
+  );
 }
 export default ProfileCard;
 
@@ -47,4 +54,25 @@ function Avatar(){
         <img src={blessing} alt="myphoto" class="avatar"/>
     )
 }
+ function Intro(props){
+    return(
+        <div>
+            <h>{props.name}</h>
+            <p>
+             {props.about}
+            </p>
+        </div>
+    )
+ }
+  function Skills(){
+    return (
+        <div class='skills' style={{backgroundColor:skillname.color}}>
+            {skills.map((skillname)=>(
+                <ul>
+                    {skillname.skill}
+                </ul>
+            ))}
+        </div>
+    )
+  }
 
