@@ -46,7 +46,7 @@ function ProfileCard() {
       </div>
       <ul>
        {skills.map((skillname)=>(
-        <Skills skill={skillname.skill} color={skillname.color} level={skillname.level} className=" Skills"/>
+        <Skills skill={skillname.skill} color={skillname.color} level={skillname.level} className='Skills'/>
        ))}
     </ul>
     </div>
@@ -68,28 +68,16 @@ function Avatar(){
         </div>
     )
  }
-  function Skills(props){
-    
-        if(props.level =="advanced"){
-            return(
-        <span style={{backgroundColor:props.color}}>
-            {props.skill} 💪 
-            </span>
-            )
-        };
-            if( props.level == "intermediate"){
-                return(
-                <span style={{backgroundColor:props.color}}>
-                {props.skill}👍
-                </span>
-                )
-            };
-                if(props.level =="beginner"){
-              return(
-                <span style={{backgroundColor:props.color}}>
-                  {props.skill} 👶
-                </span>
-              )
-                }
+  function Skills({skill, level, color}){
+    return (
+      <div className="skill"style={{ backgroundColor: color }}>
+        <span>{skill}</span>
+        <span>
+          {level==="advanced" && "💪"}
+          {level==="intermediate" && "👍"}
+          {level==="beginner" && "👶"}
+        </span>
+      </div>
+    );
   }
 
